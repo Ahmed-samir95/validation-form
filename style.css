@@ -2,5 +2,53 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
+}
+
+html{
+    font-size: 10px;
+}
+
+:root{
+    --main-color: #62CD85;
+    --second-color: #fff;
+    --third-color: #bbb2b2
+}
+
+body{
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: var(--second-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 .2erm .5rem rgba(0,0,0,0.3);
+    width: 40rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.header{
+   background-color: var(--third-color);
+   padding: 2rem 4rem;
+}
+
+.header h2{
+    margin: 0;
+    text-align: center;
+}
+
+form{
+    padding: 3rem 4rem;
+}
+
+.control{
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    position: relative;
 }
