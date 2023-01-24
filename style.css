@@ -13,7 +13,9 @@ html{
 :root{
     --main-color: #62CD85;
     --second-color: #fff;
-    --third-color: #bbb2b2
+    --third-color: #bbb2b2;
+    --hover-color: #84e6a4;
+    --error-color: #e74c3c;
 }
 
 body{
@@ -52,3 +54,57 @@ form{
     padding-bottom: 2rem;
     position: relative;
 }
+
+.control label{
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.control input{
+    border: .2rem solid var(--third-color);
+    border-radius: .4rem;
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+    font-family: inherit;
+    padding: 1rem;
+}
+
+.control.success input{
+    border-color: var(--main-color);
+}
+
+.control.error input{
+    border-color: var(--error-color);
+}
+
+.control small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+form button{
+    background-color: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    cursor: pointer;
+    color: var(--second-color);
+    width: 100%;
+    padding: .4rem;
+    font-size: 2rem;
+    font-family: inherit;
+    transition: .3s;
+}
+
+form button:hover{
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+
+
+
+
