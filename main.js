@@ -5,7 +5,7 @@ const email = document.getElementById('email');
 const passWord = document.getElementById('password');
 const chPassword = document.getElementById('chPassword');
 
-console.log(email)
+console.log(passWord)
 
 
 form.addEventListener('submit', (ele)=> {
@@ -33,6 +33,15 @@ function checkInputs() {
         setErrorFor(email, 'Email is not valid');
     }else{
         setSuccessFor(email)
+    }
+
+    // check password input
+    if (passWordValue === '') {
+        setErrorFor(passWord, 'Password cannot be blanck');
+    }else if(!passWordValue < 8) {
+        setErrorFor(passWord, 'password should be more than 8');
+    }else{
+        setSuccessFor(passWord)
     }
 
 }
