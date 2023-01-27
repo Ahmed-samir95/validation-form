@@ -5,9 +5,10 @@ const email = document.getElementById('email');
 const passWord = document.getElementById('password');
 const chPassword = document.getElementById('chPassword');
 
-console.log(userName)
+console.log(email)
 
-form.addEventListener('submit', (ele)=>{
+
+form.addEventListener('submit', (ele)=> {
     ele.preventDefault();
 
     checkInputs()
@@ -18,11 +19,20 @@ function checkInputs() {
     const emailValue = email.value.trim();
     const passWordValue = passWord.value.trim();
     const chPassWordValue = chPassword.value.trim()
-
+    // check user name input
     if (userNameValue === '') {
         setErrorFor(userName, 'user name cannot be blanck');
     }else{
         setSuccessFor(userName)
+    }
+
+    // check email input
+    if (emailValue === '') {
+        setErrorFor(email, 'Email cannot be blanck');
+    }else if(!isEmailValid(emailValue)) {
+        setErrorFor(email, 'Email is not valid');
+    }else{
+        setSuccessFor(email)
     }
 
 }
@@ -39,8 +49,10 @@ function setSuccessFor(input) {
     control.className = 'control success'
 }
 
+function isEmailValid(emailV) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailV);
 
-
+}
 
 
 
