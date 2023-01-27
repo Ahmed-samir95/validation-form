@@ -38,10 +38,17 @@ function checkInputs() {
     // check password input
     if (passWordValue === '') {
         setErrorFor(passWord, 'Password cannot be blanck');
-    }else if(!passWordValue < 8) {
-        setErrorFor(passWord, 'password should be more than 8');
     }else{
         setSuccessFor(passWord)
+    }
+
+     // check chPassword input
+     if (chPassWordValue === '') {
+        setErrorFor(chPassword, 'Check Password cannot be blanck');
+    }else if(passWordValue !== chPassWordValue) {
+        setErrorFor(chPassword, 'Password dose not match');
+    }else{
+        setSuccessFor(chPassword)
     }
 
 }
