@@ -5,9 +5,6 @@ const email = document.getElementById('email');
 const passWord = document.getElementById('password');
 const chPassword = document.getElementById('chPassword');
 
-console.log(passWord)
-
-
 form.addEventListener('submit', (ele)=> {
     ele.preventDefault();
 
